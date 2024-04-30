@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper
+       namespace="com.project.demo.repository.ShowTimeRepository">
+       
+     <select id="fetchAllShows" resultType="ShowTime">
+        select ShowtimeID  as showTimeId,TheaterID as theatreId , MovieID as movieId ,date as date,Time as time from showtime where movieId = #{movieId} and city = #{city} and date = #{date};
+      
+     
+     </select>  
+       </mapper>
